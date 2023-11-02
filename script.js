@@ -1,5 +1,5 @@
 let imageContainer = document.querySelector('.imageContainer');
-const apiKey = 'BTGs7EWSmMTazDjzaH3xEbX3n0Jzp9-UloD1PsUEOpw';
+const apiKey = 'xygnL49gQZTMKBvzHCFMa2gBB86XTG3iTJ4xOjLDjJY';
 const page = 10;
 
 //todo: Fetch API
@@ -29,6 +29,7 @@ function appendImage(imageArray){
 
 }
 window.addEventListener('scroll', () =>{
-    fetchAPI();
-    // appendImage();
+    if(window.scrollY + window.innerHeight  >= document.body.offsetHeight){
+        fetchAPI();
+    }
 });
